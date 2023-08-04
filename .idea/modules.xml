@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Module11FunctionalProgrammingStreamAPI.iml" filepath="$PROJECT_DIR$/Module11FunctionalProgrammingStreamAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getOddIndexedNames/getOddIndexedNames.iml" filepath="$PROJECT_DIR$/getOddIndexedNames/getOddIndexedNames.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getSortedNumbers/getSortedNumbers.iml" filepath="$PROJECT_DIR$/getSortedNumbers/getSortedNumbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linearCongruentialGenerator/linearCongruentialGenerator.iml" filepath="$PROJECT_DIR$/linearCongruentialGenerator/linearCongruentialGenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sortAndConvertToUpperCase/sortAndConvertToUpperCase.iml" filepath="$PROJECT_DIR$/sortAndConvertToUpperCase/sortAndConvertToUpperCase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zip/zip.iml" filepath="$PROJECT_DIR$/zip/zip.iml" />
+    </modules>
+  </component>
+</project>
