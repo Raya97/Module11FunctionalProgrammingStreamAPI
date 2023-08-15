@@ -1,26 +1,17 @@
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
-    public static List<String> sortAndConvertToUpperCase(List<String> strings) {
-        List<String> result = new ArrayList<>(strings);
-        Collections.sort(result, Collections.reverseOrder());
-        for (int i = 0; i < result.size(); i++) {
-            result.set(i, result.get(i).toUpperCase());
-        }
-        return result;
+    public static List<String> uppercaseAndSort(List<String> strings) {
+        return strings.stream()
+                .map(String::toUpperCase)
+                .sorted((s1, s2) -> s2.compareTo(s1))
+                .collect(Collectors.toList());
     }
 
     public static void main(String[] args) {
-        List<String> names = new ArrayList<>();
-        names.add("Ivan");
-        names.add("Peter");
-        names.add("Alex");
-        names.add("John");
-        names.add("Mike");
-
-        List<String> result = sortAndConvertToUpperCase(names);
-        System.out.println(result); // Output: ["PETER", "MIKE", "JOHN", "IVAN", "ALEX"]
+        List<String> strings = List.of("apple", "banana", "cherry", "date", "grape");
+        List<String> result = uppercaseAndSort(strings);
+        System.out.println(result);
     }
 }

@@ -1,29 +1,19 @@
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Main {
     public static String getOddIndexedNames(List<String> names) {
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < names.size(); i++) {
-            if (i % 2 == 0) {
-                if (result.length() > 0) {
-                    result.append(", ");
-                }
-                result.append(i + 1).append(". ").append(names.get(i));
-            }
-        }
-        return result.toString();
+        return IntStream.range(0, names.size())
+                .filter(i -> i % 2 != 0)
+                .mapToObj(i -> (i + 1) + ". " + names.get(i))
+                .collect(Collectors.joining(", "));
     }
 
     public static void main(String[] args) {
-        List<String> names = new ArrayList<>();
-        names.add("Ivan");
-        names.add("Peter");
-        names.add("Alex");
-        names.add("John");
-        names.add("Mike");
-
+        List<String> names = List.of("Ivan", "Peter", "Maria", "John", "Olivia");
         String result = getOddIndexedNames(names);
-        System.out.println(result); // Output: "1. Ivan, 3. Alex, 5. Mike"
+        System.out.println(result);
     }
 }
+
